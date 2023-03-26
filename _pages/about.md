@@ -9,8 +9,9 @@ redirect_from:
   - /about.html
 ---
 
-I am an assistant professor at [Gandhi Institute of Technology and Management (GITAM)](https://www.gitam.edu/). 
-I am computational scientist and engineer with a basic background in mechanical engineering. Throughout my research journey, I worked in different aspects of computational science, 
+Welcome to my website.
+Currently, I am Ramanujan Faculty Fellow at the [Department of Mechanical Engineering](https://iitpkd.ac.in/mechanical-engineering),[Indian Institute of Technology, Palakkad](https://iitpkd.ac.in/)
+With a basic background in mechanical engineering, I conducted my research in different aspects of computational science, 
 starting from code development, high-performance scientific computing, devising numerical schemes as well as the cutting-edge paradigm of 
 scientific machine learning and deep learning.
 
@@ -19,7 +20,7 @@ Research interest
 ======
 
 My research interest lies broadly in areas of i) Computational methods for partial differential
-equations for wave propagation, electrodynamics, transport phenomena. ii) Application of machine
+equations especially electrodynamics, magnetohydrodynamics. ii) Application of machine
 and deep learning in engineering and sciences. Currently, I am engaged in the following research projects:
 
 **Computational electrodynamics**
