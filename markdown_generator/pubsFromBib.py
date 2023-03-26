@@ -27,18 +27,29 @@ import re
 #todo: incorporate different collection types rather than a catch all publications, requires other changes to template
 publist = {
     "proceeding": {
-        "file" : "proceedings.bib",
+        "file" :  "/home/arijith/Desktop/my_pub.bib",
         "venuekey": "booktitle",
         "venue-pretext": "In the proceedings of ",
         "collection" : {"name":"publications",
+                        "type":  "conference",
                         "permalink":"/publication/"}
         
     },
     "journal":{
-        "file": "pubs.bib",
+        "file": "/home/arijith/Desktop/my_pub.bib",
         "venuekey" : "journal",
         "venue-pretext" : "",
         "collection" : {"name":"publications",
+                        "type" :  "journal",
+                        "permalink":"/publication/"}
+    },
+    "thesis":{
+        "file": "/home/arijith/Desktop/my_pub.bib",
+        "type" : "thesis",
+        "venuekey" : "school",
+        "venue-pretext" : "",
+        "collection" : {"name":"publications",
+                        "type":  "thesis",
                         "permalink":"/publication/"}
     } 
 }
@@ -61,8 +72,10 @@ for pubsource in publist:
     #loop through the individual references in a given bibtex file
     for bib_id in bibdata.entries:
         #reset default date
-        pub_year = "1900"
-        pub_month = "01"
+# =============================================================================
+#         pub_year = "1900"
+#         pub_month = "01"
+# =============================================================================
         pub_day = "01"
         
         b = bibdata.entries[bib_id].fields
@@ -85,6 +98,7 @@ for pubsource in publist:
 
                 
             pub_date = pub_year+"-"+pub_month+"-"+pub_day
+#            pub_date = pub_year+"-"+pub_month
             
             #strip out {} as needed (some bibtex entries that maintain formatting)
             clean_title = b["title"].replace("{", "").replace("}","").replace("\\","").replace(" ","-")    
@@ -115,14 +129,16 @@ for pubsource in publist:
             ## YAML variables
             md = "---\ntitle: \""   + html_escape(b["title"].replace("{", "").replace("}","").replace("\\","")) + '"\n'
             
-            md += """collection: """ +  publist[pubsource]["collection"]["name"]
+            md += """collection: """ +  publist[pubsource]["collection"]["name"] + '\n'
+            md += """type: """ + "\""+ publist[pubsource]["collection"]["type"] + "\""
+            
 
             md += """\npermalink: """ + publist[pubsource]["collection"]["permalink"]  + html_filename
             
-            note = False
-            if "note" in b.keys():
-                if len(str(b["note"])) > 5:
-                    md += "\nexcerpt: '" + html_escape(b["note"]) + "'"
+            abstract = False
+            if "abstract" in b.keys():
+                if len(str(b["abstract"])) > 5:
+                    md += "\nexcerpt: '" + html_escape(b["abstract"]) + "'"
                     note = True
 
             md += "\ndate: " + str(pub_date) 
@@ -141,13 +157,14 @@ for pubsource in publist:
 
             
             ## Markdown description for individual page
-            if note:
-                md += "\n" + html_escape(b["note"]) + "\n"
+            if abstract:
+                md += "\n" + html_escape(b["abstract"])
+                
 
             if url:
-                md += "\n[Access paper here](" + b["url"] + "){:target=\"_blank\"}\n" 
-            else:
-                md += "\nUse [Google Scholar](https://scholar.google.com/scholar?q="+html.escape(clean_title.replace("-","+"))+"){:target=\"_blank\"} for full citation"
+                md += "\n[Read more](" + b["url"] + "){:target=\"_blank\"}\n" 
+#            else:
+#                md += "\nUse [Google Scholar](https://scholar.google.com/scholar?q="+html.escape(clean_title.replace("-","+"))+"){:target=\"_blank\"} for full citation"
 
             md_filename = os.path.basename(md_filename)
 

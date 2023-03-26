@@ -6,8 +6,10 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 plugins:
-  - jekyll-remote-theme
-remote_theme           : "mmistakes/minimal-mistakes"
+  #  - jekyll-remote-theme
+  #  - jekyll-theme-hyde
+    remote_theme           : "mmistakes/minimal-mistakes"
+      #remote_theme           : "poole/hyde"
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 # Site Settings
 locale                   : "en-US"
@@ -85,11 +87,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Assistant Professor"
+  name             : "Ramanujan Faculty Fellow"
   avatar           : "profile.jpg"
-  bio              : "Department of Mechanical Engineering"
-  location         : "Vizag"
-  employer         : "GITAM University"
+  bio              : "Mechanical Engineering, IIT Palakkad"
+  location         : "Palakkad"
+  employer         : "Indian Institute of Technology, Palakkad"
   pubmed           : ""
   googlescholar    : "https://scholar.google.com/citations?user=EJ8Ya1EAAAAJ&hl=en&authuser=1"
   email            : "mailtohazra@gmail.com"
@@ -163,7 +165,7 @@ markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
-incremental: false
+incremental: true
 
 
 # Markdown Processing

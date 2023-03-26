@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Publications"
+[//]: # title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
@@ -10,7 +10,22 @@ author_profile: true
 {% endif %}
 
 {% include base_path %}
-
+# Journal Publications
 {% for post in site.publications reversed %}
-  {% include archive-single.html %}
+{% if post.type == 'journal' %}
+{% include archive-single-cv.html %}
+{% endif %}
+{% endfor %}
+
+# Conference Proceedings 
+{% for post in site.publications reversed %}
+{% if post.type == 'conference' %}
+{% include archive-single.html %}
+{% endif %}
+{% endfor %}
+# Doctoral Thesis
+{% for post in site.publications reversed %}
+{% if post.type == 'thesis' %}
+{% include archive-single.html %}
+{% endif %}
 {% endfor %}

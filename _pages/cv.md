@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+[//]: # title: "CV"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,51 +9,54 @@ redirect_from:
 
 {% include base_path %}
 
+
+Work Experience
+======
+
+**Assistant Professor, Mechanical Engineering, GITAM University**  
+September 2022 to present 
+
+**Post-doctoral Fellow, University of the Basque Country (UPV/EHU), Leioa, Basque Country, Spain**   
+May, 2021 to April, 2022
+<!--- I worked in the group led by David Pardo on the topic of *Deep learning-based inversion for geosteering* --->
+
+**Post-doctoral Fellow, Basque Center for Applied Mathematics , Bilbao, Spain**  
+February, 2020 to March, 2021  
+<!--- I worked in the group led by David Pardo on the topic of *Deep learning-based inversion for geosteering* --->
+
+**Post-doctoral Fellow, Centre for Applicable Mathematics, TIFR, Bengaluru, India**  
+January, 2018 to January, 2020   
+<!--- I worked in the group led by Praveen Chandrashekar on --->
+
+**Post-doctoral Fellow, Georg-August-University, G&ouml;ttingen, Germany**  
+November, 2016 to October, 2017  
+
+**Doctoral Researcher, Biomed NMR, Max Planck Institute for Biophysical Chemistry (Now, Multidisciplinary Sciences)**  
+August, 2012 to October, 2016  
+
+
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+**Ph.D. in Mathematical Sciences, Georg-August-University, G&ouml;ttingen**
+April, 2013 to October, 2016
 
-Work experience
-======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+PhD Thesis: *Numerical Simulation of Bloch Equations for Dynamic Magnetic Resonance
+Imaging*  
+Advisors: Prof. Dr. Gert Lube & Prof. Dr. Jens Frahm  
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+**M.Tech in Mechanical Engineering, Indian Instittute of Technology, Kanpur**  
+July, 2009 to August, 2011
 
-Publications
+**B.M.E in Mechanical Engineering, Jadavpur University, Kolkata**  
+July, 2003 to June, 2007
+
+
+Research visits
 ======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+**Visiting postdoctoral fellow at the Department of Physics and Applied Mathematics, University of Notre Dame**
+September, 2018 to December, 2018 & July, 2019 to October, 2019     
+Host: Prof. Dinshaw S. Balsara
+
+
   
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
   
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams

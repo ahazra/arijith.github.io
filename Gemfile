@@ -10,6 +10,8 @@ source "https://rubygems.org"
 # Happy Jekylling!
 
 gem "github-pages", group: :jekyll_plugins
+gem "jekyll-include-cache", group: :jekyll_plugins
+gem "minimal-mistakes-jekyll"
 
 # If you want to use Jekyll native, uncomment the line below.
 # To upgrade, run `bundle update`.
@@ -29,3 +31,8 @@ end
 gem "webrick", "~> 1.7"
 
 gem "faraday-retry", "~> 2.0"
+
+gem "jekyll-theme-hyde", "~> 2.0"
+
+gem "jekyll-theme-hyde-plus", "~> 0.2.0"
+gem 'eventmachine', '1.2.7', git: 'https://github.com/eventmachine/eventmachine.git', tag: 'v1.2.7'
