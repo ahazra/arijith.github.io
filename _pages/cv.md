@@ -1,20 +1,18 @@
 ---
-layout: archive
-[//]: # title: "CV"
+layout: single
 permalink: /cv/
-author_profile: true
-redirect_from:
-  - /resume
 ---
 
 {% include base_path %}
 
 
-Work Experience
-======
+## Work Experience
+
+**Ramanujan Faculty Fellow, Mechanical Engineering, Indian Institute of Technology, Palakkad**  
+February 2023 to present 
 
 **Assistant Professor, Mechanical Engineering, GITAM University**  
-September 2022 to present 
+September 2022 to February 2023 
 
 **Post-doctoral Fellow, University of the Basque Country (UPV/EHU), Leioa, Basque Country, Spain**   
 May, 2021 to April, 2022

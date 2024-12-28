@@ -8,12 +8,12 @@
 plugins:
   #  - jekyll-remote-theme
   #  - jekyll-theme-hyde
-    remote_theme           : "mmistakes/minimal-mistakes"
-      #remote_theme           : "poole/hyde"
+  remote_theme           : "mmistakes/minimal-mistakes"
+  #remote_theme           : "poole/hyde"
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 # Site Settings
 locale                   : "en-US"
-title                    : "Arijit Hazra"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Arijit Hazra"
 description              : &description "personal description"
@@ -24,7 +24,7 @@ teaser                   :  # filename of teaser fallback teaser image placed in
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
+read_more                : "enabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false #change to true to add link to talkmap on talks page
 
 comments:
@@ -87,11 +87,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Ramanujan Faculty Fellow"
+  name             : "Arijit Hazra"
   avatar           : "profile.jpg"
-  bio              : "Mechanical Engineering, IIT Palakkad"
+  bio              : "Ramanujan Fellow, Mechanical Engineering, IIT Palakkad"
   location         : "Palakkad"
-  employer         : "Indian Institute of Technology, Palakkad"
+  employer         : "Indian Institute of Technology"
   pubmed           : ""
   googlescholar    : "https://scholar.google.com/citations?user=EJ8Ya1EAAAAJ&hl=en&authuser=1"
   email            : "mailtohazra@gmail.com"
@@ -182,16 +182,25 @@ kramdown:
 
 # Collections
 collections:
+  cv:
+    output: true
+    permalink: /:collection/:path/
   teaching:
     output: true
     permalink: /:collection/:path/
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
+  selectedpub:
+    output: true
+    permalink: /:collection/:path/
+  research:
     output: true
     permalink: /:collection/:path/
   talks:
+    output: true
+    permalink: /:collection/:path/
+  personal blog:
     output: true
     permalink: /:collection/:path/
 
@@ -237,7 +246,7 @@ defaults:
   # _portfolio
   - scope:
       path: ""
-      type: portfolio
+      type: research
     values:
       layout: single
       author_profile: true
